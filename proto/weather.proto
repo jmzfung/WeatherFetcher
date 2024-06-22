@@ -1,0 +1,18 @@
+syntax = "proto3";
+package weather;
+option go_package = "github.com/jmzfung/WeatherFetcher";
+// The WeatherFetcher service definition
+service WeatherFetcher {
+rpc GetWeather (WeatherRequest) returns (WeatherResponse);
+}
+// Request message to fetch weather data
+message WeatherRequest {
+string city = 1;
+}
+// Response message containing the weather data
+message WeatherResponse {
+string city = 1;
+double temperature = 2;
+double humidity = 3;
+double wind_speed = 4;
+}
