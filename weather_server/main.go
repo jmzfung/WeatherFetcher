@@ -20,7 +20,7 @@ const (
 )
 
 var (
-	port                           = flag.Int("port", 50051, "The server port")
+	port                           = flag.Int("port", 8080, "The server port")
 	badResponse wf.WeatherResponse = wf.WeatherResponse{City: "", Temperature: 0, Humidity: 0, WindSpeed: 0}
 )
 
